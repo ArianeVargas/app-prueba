@@ -4,14 +4,12 @@
 
     <form action="{{ route('posts.store') }}" method="POST">
         @csrf {{-- proteccion token  --}}
-        <label for="">titulo <br>
-            <input name="title" type="text"><br>
-        </label><br>
-        <label for="">Body<br>
-            <textarea name="body"></textarea><br>
-        </label><br>
+
+        @include('posts.form-fields')
+
         <button type="submit">Enviar</button>
     </form>
+
     <br><br>
     <a href="{{route('posts.index')}}">Regresar</a>
 

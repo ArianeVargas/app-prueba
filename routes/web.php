@@ -34,6 +34,8 @@ use Illuminate\Support\Facades\Route;
  Route::get('/blog/create', [PostController::class, 'create'])->name('posts.create');//crea
  Route::post('/blog', [PostController::class, 'store'])->name('posts.store');//almacena
  Route::get('/blog/{post}', [PostController::class, 'show'])->name('posts.show');//muestra contenido
+ Route::get('/blog/{post}/editar', [PostController::class, 'edit'])->name('posts.edit');//editar post
+ Route::patch('/blog/{post}', [PostController::class, 'update'])-> name('posts.update');//actualizar post
 
  //app/acercaDeMi => about
  Route::view('/about','about')-> name('about');

@@ -1,3 +1,4 @@
+{{-- @vite(['resources/js/app.js', 'resources/css/app.scss'])
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -18,4 +19,13 @@
       </ol>
     </nav>
   </div>
-    </nav>
+    </nav> --}}
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sobr Mi</a></li>
+    </ul>
+</nav>
