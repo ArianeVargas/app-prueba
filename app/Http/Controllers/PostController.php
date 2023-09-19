@@ -44,7 +44,7 @@ class PostController extends Controller
 
         /* session()->flash('status', 'Post created!'); */ //mensaje creado
 
-        return redirect()->route('posts.index')->with('status', 'Post created!');//con with reemplazamos session flash
+        return redirect()->route('posts.index')->with('status', 'Post created!'); //con with reemplazamos session flash
     }
 
     public function edit(Post $post)
@@ -52,16 +52,25 @@ class PostController extends Controller
         return view('posts.edit', ['post' => $post]);
     }
 
-    public function update(SavePostRequest $request, Post $post)//editar post
+    public function update(SavePostRequest $request, Post $post) //editar post
     {
         /* $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->save(); */
 
-        $post-> update($request->validated());
+        $post->update($request->validated());
 
         /* session()->flash('status', 'Post update!'); */ //mensaje creado
 
-        return redirect()->route('posts.show', $post )->with('status', 'Post update!');//reemplazo de session flash
+        return redirect()->route('posts.show', $post)->with('status', 'Post update!'); //reemplazo de session flash
+    }
+
+    public function destroy(Post $post)
+    {
+        // Realiza la lógica para eliminar el post
+        $post->delete();
+
+        // Redirige a la página de índice de posts o a donde desees
+        return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente');
     }
 }

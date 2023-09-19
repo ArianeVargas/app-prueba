@@ -15,16 +15,17 @@
     @vite(['resources/js/app.js', 'resources/css/app.scss'])
 </head>
 
-<body>
+<body class="antialiased bg-slate-100 dark:bg-slate-900">
     <!-- contenido de la pagina -->
     {{-- @include('partials.nav')
 
     @yield('content') --}}
 
     <x-layouts.nav />
-
     @if (session('status'))
-        <div>{{ session('status') }}</div>
+    <div class="max-w-screen-xl px-3 py-2 mx-auto font-bold text-white sm:px-6 lg:px-8 bg-emerald-500 dark:bg-emerald-700">
+        {{ session('status') }}
+    </div>
     @endif
 
     {{ $slot }}

@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="antialiased bg-slate-100 dark:bg-slate-900">
     <!-- contenido de la pagina -->
     @include('partials.nav')
 

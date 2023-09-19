@@ -24,7 +24,7 @@ est es la forma con template inherentance
         Home title
     </x-slot> --}}
 
-    <h2>Bienvenidos a Home</h2>
+    <h2 class="my-4 font-serif text-3xl text-center text-sky-600 dark:text-sky-500">Bienvenidos a Home</h2>
 </x-layouts.layout>
 
 
