@@ -40,7 +40,7 @@ class PostController extends Controller
         $post->body = $request->input('body');
         $post->save(); */
 
-        Post::created($request->validated());
+        Post::create($request->validated());
 
         /* session()->flash('status', 'Post created!'); */ //mensaje creado
 
@@ -67,10 +67,7 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
-        // Realiza la lógica para eliminar el post
         $post->delete();
-
-        // Redirige a la página de índice de posts o a donde desees
-        return redirect()->route('posts.index')->with('success', 'Post eliminado exitosamente');
+        return redirect()->route('posts.index')->with('status', 'Post delete!');
     }
 }

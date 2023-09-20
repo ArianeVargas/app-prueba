@@ -1,12 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'blog')
-
-@section('meta-description', 'blog description')
-
-{{-- recorreremos los post con un foreach  --}}
-
-@section('content')
+<x-layouts.layout title="ivan" meta- description="Home meta description">
 
     <header class="px-6 py-4 space-y-2 text-center">
         <h1 class="font-serif text-3xl text-sky-600 dark:text-sky-500">Bienvenidos a Blog</h1>
@@ -38,4 +30,4 @@
             </div>
         @endforeach
     </main>
-@endsection
+</x-layouts.layout>
